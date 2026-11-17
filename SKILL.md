@@ -121,9 +121,11 @@ Toda documentação técnica (tanto em Markdown quanto em PDF) deve conter:
    - TekServer autentica consumidor e usuário e responde com JWT.
    - Integrador chama `POST /apidyn/...` enviando `Authorization: Bearer <token>`.
 3. **Quadro de Conexão e Credenciais**: Tabela de variáveis (`Host`, `Porta`, `Token Consumidor`, `Token Usuário`).
-4. **Pré-requisitos no ERP**:
+4. **Pré-requisitos no ERP e Infraestrutura**:
    - Necessidade de instalação prévia da funcionalidade pelo **Marketplace Tek-System** (SoftwareCenter).
    - Liberação explícita do usuário da integração na aba de **Usuários Autorizados** dentro do cadastro da API Dinâmica no BI (`GeradorRelatorioMC`).
+   - Configuração do serviço no **TekServer Horse** com liberação da porta de escuta (ex: `8080`) no firewall e redirecionamento NAT.
+   - Liberação do **IP externo público** para tráfego de entrada e liberação de IPs de origem (*whitelist*) dos servidores parceiros.
 5. **Endpoint 1: Autenticação (`/auth`)**:
    - Método, URL completa, Headers (`Content-Type: application/json`).
    - Body JSON e tabela explicativa dos campos (`Sistema`, `Token`, `consumidor`).
