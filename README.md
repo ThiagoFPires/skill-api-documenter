@@ -42,6 +42,9 @@ skill-api-documenter/
 │       ├── timbrado_tek_quadrado.png
 │       ├── timbrado_tek_quadrado_marca_dagua.png
 │       └── timbrado_tek_rodape.png
+├── templates/                        # Modelos padrão reutilizáveis (sem dados sensíveis de clientes)
+│   ├── MODELO_DOCUMENTACAO_API.md    # Template oficial em Markdown com placeholders
+│   └── Modelo_Documentacao_API_Template.pdf # PDF corporativo gerado em 4 páginas calibradas
 └── scripts/
     ├── extract_postman.ps1           # Extrator LevelDB do Postman (variáveis e requisições)
     ├── inspect_tekserver.ps1         # Scanner de memória 64-bit para DataSnap XML no TekServer

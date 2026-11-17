@@ -2,5 +2,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pdf
+!templates/*.pdf
 .DS_Store
 Thumbs.db
