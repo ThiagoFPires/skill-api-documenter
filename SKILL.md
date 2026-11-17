@@ -121,14 +121,17 @@ Toda documentação técnica (tanto em Markdown quanto em PDF) deve conter:
    - TekServer autentica consumidor e usuário e responde com JWT.
    - Integrador chama `POST /apidyn/...` enviando `Authorization: Bearer <token>`.
 3. **Quadro de Conexão e Credenciais**: Tabela de variáveis (`Host`, `Porta`, `Token Consumidor`, `Token Usuário`).
-4. **Endpoint 1: Autenticação (`/auth`)**:
+4. **Pré-requisitos no ERP**:
+   - Necessidade de instalação prévia da funcionalidade pelo **Marketplace Tek-System** (SoftwareCenter).
+   - Liberação explícita do usuário da integração na aba de **Usuários Autorizados** dentro do cadastro da API Dinâmica no BI (`GeradorRelatorioMC`).
+5. **Endpoint 1: Autenticação (`/auth`)**:
    - Método, URL completa, Headers (`Content-Type: application/json`).
    - Body JSON e tabela explicativa dos campos (`Sistema`, `Token`, `consumidor`).
    - Retorno JSON (`token_Acesso`, expiração).
    - Script de pré-requisição / pós-resposta do Postman.
-5. **Endpoint 2: Rota Dinâmica (`/apidyn/...`)**:
+6. **Endpoint 2: Rota Dinâmica (`/apidyn/...`)**:
    - Metadados do ERP (Handler, recurso, grupo).
    - Headers (`Authorization: Bearer {{tek_acess_token}}`).
    - Body JSON de envio com tabela de tipos e descrições campo a campo.
    - Retorno `200 OK` detalhado com status de negócio (ex: número da entrega, chave NF-e).
-6. **Exemplos Prontos em cURL**: Comandos funcionais prontos para terminal.
+7. **Exemplos Prontos em cURL**: Comandos funcionais prontos para terminal.
